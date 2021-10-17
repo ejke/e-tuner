@@ -1,4 +1,7 @@
 .ety-background {
     background-color: #2D2C35;
-    height: 100vh
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
