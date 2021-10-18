@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'e-tuner';
+
+  ngAfterViewInit() {
+    console.log(`ngAfterViewInit`);
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then((stream) => {
+        console.log("Using the mic!")
+        console.log(stream)
+      })
+      .catch((e) => {
+        console.log("no mic: "+ e);
+      })
+  }
 }
